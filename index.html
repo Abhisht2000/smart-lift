@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Lift Tracker - Real-time elevator tracking system that helps you decide whether to take stairs or choose the fastest lift option">
+  <title>Smart Lift Tracker - Efficient Time Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+            <path d="M6 12H4c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1zm6-6h-2c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1zm6-6h-2c-.6 0-1 .4-1 1v19c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1z" 
+            fill="#39FF14"/>
+          </svg>
+          <h1>Smart<span class="text-neon">Lift</span></h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#solution">Our Solution</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#solution">Our Solution</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text reveal fade-in">
+          <h2>Stop Wasting Time <span class="text-neon neon-glow">Waiting</span> for Elevators</h2>
+          <p>Our Smart Lift Tracker System revolutionizes vertical transportation in busy buildings, saving you precious minutes every day.</p>
+          <div class="hero-buttons">
+            <a href="#solution" class="btn btn-primary">Discover the Solution</a>
+            <a href="#contact" class="btn btn-outline">Request a Demo</a>
+          </div>
+        </div>
+        <div class="hero-image reveal fade-in" data-delay="200">
+          <div class="image-container float-animation">
+            <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=1287&auto=format&fit=crop" alt="Modern elevator with digital display">
+            <div class="overlay-gradient"></div>
+            <div class="status-box">
+              <div class="status-indicators">
+                <span class="indicator red"></span>
+                <span class="indicator yellow"></span>
+                <span class="indicator green"></span>
+              </div>
+              <div class="status-content">
+                <div>
+                  <div class="status-label">SmartLift Status</div>
+                  <div class="status-value">Floor 12 → Ground</div>
+                </div>
+                <div class="status-time">24s</div>
+              </div>
+            </div>
+          </div>
+          <div class="glow-effect"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-header reveal fade-in">
+        <h2>Time Lost in the <span class="text-neon">Waiting Game</span></h2>
+        <p>Every day, people waste countless minutes waiting for elevators, leading to frustration, stress, and decreased productivity in offices, apartments, and commercial buildings.</p>
+      </div>
+      <div class="problem-cards">
+        <div class="card reveal fade-in" data-delay="100">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=500&auto=format&fit=crop" alt="People waiting for elevator" loading="lazy">
+          <h3>Wasted Time</h3>
+          <p>The average office worker spends up to 15 minutes daily waiting for elevators, adding up to over 60 hours per year of lost productivity.</p>
+        </div>
+        <div class="card reveal fade-in" data-delay="200">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop" alt="Stressed person checking watch" loading="lazy">
+          <h3>Indecision Stress</h3>
+          <p>"Should I wait or take the stairs?" This daily dilemma causes unnecessary stress and anxiety, especially when you're running late.</p>
+        </div>
+        <div class="card reveal fade-in" data-delay="300">
+          <img src="https://images.unsplash.com/photo-1600831606133-c9302e09b9bd?q=80&w=500&auto=format&fit=crop" alt="Crowded elevator" loading="lazy">
+          <h3>Crowded Spaces</h3>
+          <p>Overcrowded elevators lead to uncomfortable experiences and longer wait times as people try to squeeze in or wait for the next one.</p>
+        </div>
+        <div class="card reveal fade-in" data-delay="400">
+          <img src="https://images.unsplash.com/photo-1534551767192-78b8dd45b51b?q=80&w=500&auto=format&fit=crop" alt="Frustrated at elevator panel" loading="lazy">
+          <h3>Daily Frustration</h3>
+          <p>Elevator inefficiency causes cumulative frustration, negatively impacting mood and productivity throughout the workday.</p>
+        </div>
+      </div>
+      <div class="quote reveal fade-in" data-delay="500">
+        <p>"The average person will spend approximately <span class="text-neon font-bold">2-3 years</span> of their life waiting for things, with elevator waiting being a significant contributor."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution" id="solution">
+    <div class="container">
+      <div class="section-header reveal fade-in">
+        <h2>Introducing the <span class="text-neon neon-glow">Smart Lift Tracker</span> System</h2>
+        <p>A revolutionary real-time elevator tracking system that eliminates guesswork and helps you make informed decisions about your vertical travel.</p>
+      </div>
+      
+      <div class="solution-content">
+        <div class="elevator-display reveal fade-in" data-delay="100">
+          <div class="elevator-interface">
+            <div class="elevator-shafts">
+              <div class="shaft">
+                <div class="elevator elevator-a"><span>A</span></div>
+                <div class="floor-label bottom">Floor 1</div>
+                <div class="floor-label middle">Floor 2</div>
+                <div class="floor-label top">Floor 3</div>
+              </div>
+              <div class="shaft">
+                <div class="elevator elevator-b"><span>B</span></div>
+              </div>
+              <div class="shaft">
+                <div class="elevator elevator-c"><span>C</span></div>
+              </div>
+            </div>
+            
+            <div class="status-panel">
+              <div class="recommendation">
+                <span class="label">Best Option:</span>
+                <span class="value">Elevator B (arriving in 8s)</span>
+              </div>
+              <div class="time">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span id="current-time"></span>
+              </div>
+            </div>
+            
+            <div class="elevator-options">
+              <div class="option">
+                <div class="option-name">Elevator A</div>
+                <div class="option-time">25s</div>
+              </div>
+              <div class="option highlighted">
+                <div class="option-name">Elevator B</div>
+                <div class="option-time">8s</div>
+              </div>
+              <div class="option">
+                <div class="option-name">Elevator C</div>
+                <div class="option-time">17s</div>
+              </div>
+            </div>
+            
+            <div class="window-controls">
+              <span class="control red"></span>
+              <span class="control yellow"></span>
+              <span class="control green pulse"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="features-list reveal fade-in" data-delay="200">
+          <h3>Real-Time Lift Intelligence at Your Fingertips</h3>
+          <ul>
+            <li class="reveal fade-in-right" data-delay="300">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 22v-2c2-1 4-2 5.5-2.5M12 17c4 0 8 2 10 4M11.5 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8"></path>
+                  <circle cx="11.5" cy="6.5" r="2.5"></circle>
+                </svg>
+              </div>
+              <div>
+                <h4>Live Position Tracking</h4>
+                <p>See the exact location and movement of each elevator in your building in real-time.</p>
+              </div>
+            </li>
+            <li class="reveal fade-in-right" data-delay="400">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Arrival Time Prediction</h4>
+                <p>Advanced algorithms calculate precise arrival times, taking into account current load and traffic patterns.</p>
+              </div>
+            </li>
+            <li class="reveal fade-in-right" data-delay="500">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Smart Decision Support</h4>
+                <p>Get instant recommendations on whether to wait or take the stairs based on your floor and destination.</p>
+              </div>
+            </li>
+            <li class="reveal fade-in-right" data-delay="600">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <h4>Mobile App Integration</h4>
+                <p>Access all features from your smartphone, including notifications when your elevator is approaching.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- App Mockup Section -->
+      <div class="app-section reveal fade-in" data-delay="700">
+        <div class="section-header">
+          <h2>Advanced <span class="text-neon neon-glow">Mobile App</span> Interface</h2>
+          <p>Our intuitive mobile app puts the power of smart elevator management in your pocket, helping you make better decisions and save time every day.</p>
+        </div>
+        
+        <div class="app-features-container">
+          <div class="app-features left-features reveal fade-in-left" data-delay="800">
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>People Counter</h4>
+                <p>See how many people are waiting for each elevator and inside them in real-time.</p>
+              </div>
+            </div>
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Precise Wait Times</h4>
+                <p>Get accurate predictions of when each elevator will arrive at your floor.</p>
+              </div>
+            </div>
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Smart Recommendations</h4>
+                <p>Our algorithm analyzes all variables to recommend the fastest lift option.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Phone Mockup -->
+          <div class="phone-mockup-container reveal fade-in" data-delay="900">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="app-ui">
+                  <!-- App Status Bar -->
+                  <div class="app-status-bar">
+                    <div class="time">9:41 AM</div>
+                    <div class="status-icons">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H3c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-8c0-.6-.4-1-1-1zm8-8h-2c-.6 0-1 .4-1 1v16c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1zm8-4h-2c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1z" fill="white"/>
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.24 5.22C18.24 2.44 14.97 1 12 1S5.76 2.44 3.76 5.22C1.75 8 1.34 11.34 2.64 14.7s4.29 5.46 8.52 6.22c.52.09 1.06.13 1.6.08h.17c.54.05 1.08.01 1.6-.08 4.23-.76 7.21-2.86 8.52-6.22 1.3-3.36.89-6.7-1.12-9.48z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <!-- App Header -->
+                  <div class="app-header">
+                    <div class="app-title">
+                      <h5>SmartLift</h5>
+                      <p>Tower B • Floor 12</p>
+                    </div>
+                    <div class="user-avatar">
+                      <span>JP</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Destination Selector -->
+                  <div class="destination-selector">
+                    <div class="from-location">
+                      <div class="location-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="8 14 12 10 16 14"></polyline>
+                        </svg>
+                      </div>
+                      <span>From: Floor 12</span>
+                      <span class="tag">Current</span>
+                    </div>
+                    <div class="to-location">
+                      <div class="location-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="8 10 12 14 16 10"></polyline>
+                        </svg>
+                      </div>
+                      <span>To: Ground Floor</span>
+                      <span class="floors">12 floors</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Building Overview -->
+                  <div class="building-status">
+                    <div class="status-header">
+                      <h5>Current Status</h5>
+                      <div class="live-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Live</span>
+                      </div>
+                    </div>
+                    <div class="status-metrics">
+                      <div class="metric">
+                        <div class="metric-label">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                          </svg>
+                          <span>People Waiting</span>
+                        </div>
+                        <p>14</p>
+                      </div>
+                      <div class="metric">
+                        <div class="metric-label">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="7 13 12 18 17 13"></polyline>
+                            <polyline points="7 6 12 11 17 6"></polyline>
+                          </svg>
+                          <span>Active Lifts</span>
+                        </div>
+                        <p>4/5</p>
+                      </div>
+                      <div class="metric">
+                        <div class="metric-label">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                          <span>Avg. Wait</span>
+                        </div>
+                        <p>47s</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Tab Navigation -->
+                  <div class="app-tabs">
+                    <button class="tab active" data-tab="lifts">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="7 13 12 18 17 13"></polyline>
+                        <polyline points="7 6 12 11 17 6"></polyline>
+                      </svg>
+                      Elevators
+                    </button>
+                    <button class="tab" data-tab="stairs">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18M3 18h18M3 18v-6h6v-6h6v-3h6"></path>
+                      </svg>
+                      Stairs
+                    </button>
+                  </div>
+                  
+                  <!-- Tab Content -->
+                  <div class="tab-content">
+                    <!-- Elevators Tab -->
+                    <div class="tab-pane active" id="lifts-tab">
+                      <h5>Best Option For You:</h5>
+                      
+                      <!-- Best Elevator Option -->
+                      <div class="best-option">
+                        <div class="tag-recommended">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          Recommended
+                        </div>
+                        <div class="option-main">
+                          <div class="elevator-icon">B</div>
+                          <div class="elevator-info">
+                            <h6>Elevator B</h6>
+                            <p>Arriving in <span>24s</span></p>
+                          </div>
+                          <div class="elevator-status">
+                            <div class="direction">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                              </svg>
+                              <span>Going Down</span>
+                            </div>
+                            <div class="occupancy">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                              </svg>
+                              <span>3 people inside</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="option-details">
+                          <div class="detail-item">
+                            <span>Currently at Floor 14</span>
+                            <span>Capacity: 65%</span>
+                          </div>
+                        </div>
+                        <div class="progress-container">
+                          <div class="progress-bar" style="width: 65%"></div>
+                        </div>
+                        <div class="time-metrics">
+                          <div class="time-metric">
+                            <span class="label">Wait</span>
+                            <span class="value">24s</span>
+                          </div>
+                          <div class="time-metric">
+                            <span class="label">Travel</span>
+                            <span class="value">47s</span>
+                          </div>
+                          <div class="time-metric">
+                            <span class="label">Total</span>
+                            <span class="value">1m 11s</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <h5 class="other-options-title">Other Options:</h5>
+                      
+                      <!-- Other Elevator Options -->
+                      <div class="other-options">
+                        <!-- Elevator A -->
+                        <div class="elevator-option">
+                          <div class="elevator-option-main">
+                            <div class="small-elevator-icon">A</div>
+                            <div class="elevator-info">
+                              <h6>Elevator A</h6>
+                              <p>Arriving in <span>1m 12s</span></p>
+                            </div>
+                          </div>
+                          <div class="elevator-option-status">
+                            <div class="option-direction">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                <polyline points="5 12 12 5 19 12"></polyline>
+                              </svg>
+                              <span>Floor 3</span>
+                            </div>
+                            <div class="option-occupancy">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                              </svg>
+                              <span>8 people</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Elevator C -->
+                        <div class="elevator-option">
+                          <div class="elevator-option-main">
+                            <div class="small-elevator-icon">C</div>
+                            <div class="elevator-info">
+                              <h6>Elevator C</h6>
+                              <p>Arriving in <span>58s</span></p>
+                            </div>
+                          </div>
+                          <div class="elevator-option-status">
+                            <div class="option-direction">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                              </svg>
+                              <span>Floor 18</span>
+                            </div>
+                            <div class="option-occupancy">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                              </svg>
+                              <span>2 people</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Elevator D (Out of service) -->
+                        <div class="elevator-option disabled">
+                          <div class="elevator-option-main">
+                            <div class="small-elevator-icon">D</div>
+                            <div class="elevator-info">
+                              <h6>Elevator D</h6>
+                              <div class="maintenance-status">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ff4c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <circle cx="12" cy="12" r="10"></circle>
+                                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                <span class="maintenance-label">Maintenance</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="elevator-option-status">
+                            <div class="option-direction">
+                              <span>Floor 1</span>
+                            </div>
+                            <div class="option-occupancy">
+                              <span>Not Available</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Stairs Tab (Hidden by Default) -->
+                    <div class="tab-pane" id="stairs-tab">
+                      <div class="stairs-header">
+                        <h5>Stairs Options:</h5>
+                        <span class="floors-count">12 floors down</span>
+                      </div>
+                      
+                      <!-- Stair Option A -->
+                      <div class="stairs-option best">
+                        <div class="tag-fastest">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          Fastest
+                        </div>
+                        <div class="stairs-main">
+                          <div class="stairs-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M3 21h18M3 18h18M3 18v-6h6v-6h6v-3h6"></path>
+                            </svg>
+                          </div>
+                          <div class="stairs-info">
+                            <h6>Main Staircase A</h6>
+                            <p>East Wing - Near Room 1202</p>
+                          </div>
+                        </div>
+                        
+                        <div class="stairs-stats">
+                          <div class="stat-item">
+                            <span class="stat-label">Distance</span>
+                            <span class="stat-value">214m</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-label">Steps</span>
+                            <span class="stat-value">196</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-label">Time</span>
+                            <span class="stat-value">2m 30s</span>
+                          </div>
+                        </div>
+                        
+                        <div class="congestion">
+                          <div class="congestion-header">
+                            <span>Current Congestion:</span>
+                            <span class="congestion-level low">Low</span>
+                          </div>
+                          <div class="congestion-bar">
+                            <div class="congestion-progress" style="width: 15%"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="comparison">
+                          <span>Compared to best elevator:</span>
+                          <span class="comparison-result">+ 1m 19s longer</span>
+                        </div>
+                      </div>
+                      
+                      <!-- Stair Option B -->
+                      <div class="stairs-option">
+                        <div class="stairs-main">
+                          <div class="stairs-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M3 21h18M3 18h18M3 18v-6h6v-6h6v-3h6"></path>
+                            </svg>
+                          </div>
+                          <div class="stairs-info">
+                            <h6>Service Staircase B</h6>
+                            <p>West Wing - Near Room 1225</p>
+                          </div>
+                        </div>
+                        
+                        <div class="stairs-stats">
+                          <div class="stat-item">
+                            <span class="stat-label">Distance</span>
+                            <span class="stat-value">287m</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-label">Steps</span>
+                            <span class="stat-value">208</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-label">Time</span>
+                            <span class="stat-value">3m 10s</span>
+                          </div>
+                        </div>
+                        
+                        <div class="congestion">
+                          <div class="congestion-header">
+                            <span>Current Congestion:</span>
+                            <span class="congestion-level medium">Medium</span>
+                          </div>
+                          <div class="congestion-bar">
+                            <div class="congestion-progress medium" style="width: 45%"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="comparison">
+                          <span>Compared to best elevator:</span>
+                          <span class="comparison-result">+ 1m 59s longer</span>
+                        </div>
+                      </div>
+                      
+                      <!-- Health Benefits Section -->
+                      <div class="health-benefits">
+                        <div class="benefits-header">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                          </svg>
+                          <h5>Health Benefits</h5>
+                        </div>
+                        
+                        <div class="health-metrics">
+                          <div class="health-metric">
+                            <span class="metric-label">Calories (12 floors)</span>
+                            <span class="metric-value">32 kcal</span>
+                          </div>
+                          <div class="health-metric">
+                            <span class="metric-label">Step Count</span>
+                            <span class="metric-value">~200 steps</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- App Navigation Bar -->
+                  <div class="app-nav">
+                    <div class="nav-item active">
+                      <div class="active-indicator"></div>
+                      <span>Home</span>
+                    </div>
+                    <div class="nav-item">
+                      <div class="active-indicator"></div>
+                      <span>Analytics</span>
+                    </div>
+                    <div class="nav-item">
+                      <div class="active-indicator"></div>
+                      <span>Schedule</span>
+                    </div>
+                    <div class="nav-item">
+                      <div class="active-indicator"></div>
+                      <span>Settings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="app-features right-features reveal fade-in-right" data-delay="800">
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M3 12h7"></path>
+                  <path d="M13 18h8"></path>
+                  <path d="M3 6h3"></path>
+                  <path d="M10 6h11"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Live Position Tracking</h4>
+                <p>See the real-time position of all elevators in your building with visual indicators.</p>
+              </div>
+            </div>
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 15 5 5 5-5"></path>
+                  <path d="m7 9 5-5 5 5"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Direction Indicators</h4>
+                <p>Know which direction each elevator is traveling to make smarter decisions.</p>
+              </div>
+            </div>
+            <div class="app-feature">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M16 10H8"></path>
+                  <path d="m16 14-4-4 4-4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Capacity Monitoring</h4>
+                <p>View real-time capacity status to avoid overcrowded elevators during peak hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal fade-in">
+        <h2>How <span class="text-neon">Smart Lift</span> Works</h2>
+        <p>Our system uses cutting-edge technology to deliver real-time lift information and intelligent recommendations to users.</p>
+      </div>
+      
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-step reveal fade-in" data-delay="100">
+          <div class="timeline-content">
+            <div class="step-content right">
+              <div class="step-card">
+                <h3>Smart Sensors Installation</h3>
+                <p>Precision sensors are installed in elevator shafts, doors, and control systems to monitor position, speed, and occupancy in real-time.</p>
+                <ul class="features-list">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Motion detection sensors
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Weight and capacity monitors
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Door timing systems
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-image left">
+              <img src="https://images.unsplash.com/photo-1580508174046-170816f65662?q=80&w=600&auto=format&fit=crop" alt="Smart building sensors" loading="lazy">
+            </div>
+            <div class="step-number">1</div>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="timeline-step reveal fade-in" data-delay="200">
+          <div class="timeline-content even">
+            <div class="step-content left">
+              <div class="step-card">
+                <h3>Data Processing Hub</h3>
+                <p>Our central processing unit collects sensor data and applies machine learning algorithms to predict movement patterns and calculate waiting times.</p>
+                <ul class="features-list">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Real-time data analysis
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Machine learning predictions
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Traffic pattern recognition
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-image right">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" alt="Data processing center" loading="lazy">
+            </div>
+            <div class="step-number">2</div>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="timeline-step reveal fade-in" data-delay="300">
+          <div class="timeline-content">
+            <div class="step-content right">
+              <div class="step-card">
+                <h3>User Interface Systems</h3>
+                <p>Information is delivered through intuitive displays in lobbies, hallways, and a mobile app for on-the-go access to lift status and recommendations.</p>
+                <ul class="features-list">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Wall-mounted displays
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Mobile application
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Voice announcement systems
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-image left">
+              <img src="https://images.unsplash.com/photo-1517697471339-4aa32003c11a?q=80&w=600&auto=format&fit=crop" alt="Digital display interface" loading="lazy">
+            </div>
+            <div class="step-number">3</div>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="timeline-step reveal fade-in" data-delay="400">
+          <div class="timeline-content even">
+            <div class="step-content left">
+              <div class="step-card">
+                <h3>Intelligent Response System</h3>
+                <p>The system optimizes elevator dispatching based on demand, reducing wait times and improving energy efficiency throughout the building.</p>
+                <ul class="features-list">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Smart traffic optimization
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Energy-efficient routing
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Peak-time management
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-image right">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600&auto=format&fit=crop" alt="Person using smart elevator app" loading="lazy">
+            </div>
+            <div class="step-number">4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header reveal fade-in">
+        <h2>Why Smart Lift <span class="text-neon">Matters</span></h2>
+        <p>Our system delivers measurable benefits to building owners, managers, and most importantly, the people who use elevators every day.</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <!-- Benefit Cards -->
+        <div class="benefit-card reveal fade-in" data-delay="100">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Save Valuable Time</h3>
+          <p>Reduce elevator waiting time by up to 40% through intelligent prediction and optimal decision-making guidance.</p>
+          <div class="tags">
+            <span class="tag">Time savings</span>
+            <span class="tag">Productivity</span>
+          </div>
+        </div>
+        
+        <div class="benefit-card reveal fade-in" data-delay="200">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Reduce Daily Stress</h3>
+          <p>Eliminate uncertainty and frustration by providing clear information and removing the decision paralysis of waiting.</p>
+          <div class="tags">
+            <span class="tag">Wellbeing</span>
+            <span class="tag">Mental health</span>
+          </div>
+        </div>
+        
+        <div class="benefit-card reveal fade-in" data-delay="300">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Optimize Traffic Flow</h3>
+          <p>Balance elevator usage throughout the building, reducing congestion and improving overall movement efficiency.</p>
+          <div class="tags">
+            <span class="tag">Efficiency</span>
+            <span class="tag">Flow management</span>
+          </div>
+        </div>
+        
+        <div class="benefit-card reveal fade-in" data-delay="400">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3>Energy Efficiency</h3>
+          <p>Smart routing and load balancing reduces unnecessary elevator movement, cutting energy consumption by up to 25%.</p>
+          <div class="tags">
+            <span class="tag">Sustainability</span>
+            <span class="tag">Cost savings</span>
+          </div>
+        </div>
+        
+        <div class="benefit-card reveal fade-in" data-delay="500">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Building Value</h3>
+          <p>Enhance property appeal with modern smart technology, increasing tenant satisfaction and overall building value.</p>
+          <div class="tags">
+            <span class="tag">Property value</span>
+            <span class="tag">Modernization</span>
+          </div>
+        </div>
+        
+        <div class="benefit-card reveal fade-in" data-delay="600">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"></path>
+              <path d="M13 17V9"></path>
+              <path d="M18 17V5"></path>
+              <path d="M8 17v-3"></path>
+            </svg>
+          </div>
+          <h3>Data Insights</h3>
+          <p>Gain valuable analytics on building usage patterns, helping optimize operations and plan future improvements.</p>
+          <div class="tags">
+            <span class="tag">Analytics</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-content reveal fade-in">
+          <h2>Ready to Transform Your Building's <span class="text-neon neon-glow">Vertical Transportation</span>?</h2>
+          <p>Join the growing number of forward-thinking buildings that have implemented Smart Lift Tracker to enhance efficiency and user experience.</p>
+          
+          <div class="benefits-list">
+            <div class="benefit-item reveal fade-in-left" data-delay="100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Quick Installation</span>
+            </div>
+            <div class="benefit-item reveal fade-in-left" data-delay="200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>24/7 Support</span>
+            </div>
+            <div class="benefit-item reveal fade-in-left" data-delay="300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Custom Solutions</span>
+            </div>
+            <div class="benefit-item reveal fade-in-left" data-delay="400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>ROI Guarantee</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container reveal fade-in" data-delay="200">
+          <form id="contact-form" class="contact-form">
+            <h3>Request a Demo</h3>
+            
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Company/Building</label>
+              <input type="text" id="company" name="company" placeholder="Company or Building Name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your building and needs" rows="3" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-navy">
+              Request Demo
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+              <path d="M6 12H4c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1zm6-6h-2c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1zm6-6h-2c-.6 0-1 .4-1 1v19c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1z" 
+                fill="#39FF14"/>
+            </svg>
+            <h2>Smart<span class="text-neon">Lift</span></h2>
+          </div>
+          <p>Revolutionizing vertical transportation with smart technology and real-time tracking.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="links-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#problem">The Problem</a></li>
+              <li><a href="#solution">Our Solution</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">White Papers</a></li>
+              <li><a href="#">Technical Specs</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          
+          <div class="links-column">
+            <h3>Contact</h3>
+            <ul class="contact-info">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>123 Smart Building Ave<br>Tech City, TC 10101</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>info@smartlift.tech</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Smart Lift Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <div class="toast-message">
+        <h4>Success!</h4>
+        <p>Your demo request has been submitted. We'll be in touch soon.</p>
+      </div>
+      <button class="toast-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
